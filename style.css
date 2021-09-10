@@ -32,25 +32,17 @@ main {
 
 .bilde {
 
-  padding: 50px;
-  width: 100px;
-  height: 100px;
-  
-  
+  padding: 10px;
+  width: 200px;
+  height: 200px;
   color: rgb(48, 48, 48);
-  font-weight: bold;
-  font-size: 2em;
+  font-weight:100;
+  
   border-radius: 5px;
+  line-height: 200px;
 
-  
-  
 }
 
-span {
-  margin: 50px;
-  padding-top: 50px;
-  width: 60vw;
-}
 
 button {
  
@@ -78,6 +70,8 @@ button:hover{
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover; 
+
+  
 
 }
 .stein {
