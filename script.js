@@ -32,9 +32,9 @@ function show(){
     </main>
     
 <div id='${skjult}' class='vs'>
-    <div class='bilde ${playerChoice}'></div> 
+    <div class='bilde ${playerChoice}'>Du valgte ${playerChoice}</div> 
     VS
-    <div class="bilde ${randomCC}"></div>
+    <div class="bilde ${randomCC}">Datamaskinen valgte ${randomCC}</div>
 </div>
     
     <br><div id="result">${tekst}</div>
