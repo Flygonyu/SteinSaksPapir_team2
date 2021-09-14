@@ -8,6 +8,7 @@ let tekst ='';
 let result ='';
 let skjult = 'skjult';
 const bilder = ['alex-gruber-KVsFiYXy0BE-unsplash.jpg', 'andrej-lisakov-fGZ2x8wFxC0-unsplash.jpg', 'jerome-Ru-id6AmO6A-unsplash.jpg']
+let disabled = '';
 
 //view
 show();
@@ -26,18 +27,19 @@ function show(){
     <h1>Hva velger du?</h1>
     <br>
     <main>
-    <button class='stein' onclick='velg("stein")'>Stein</button>
-    <button class='saks' onclick='velg("saks")'>Saks</button>
-    <button class='papir' onclick='velg("papir")'>Papir</button> 
+    <button ${disabled} class='stein' onclick='velg("stein")'>Stein</button>
+    <button ${disabled} class='saks' onclick='velg("saks")'>Saks</button>
+    <button ${disabled} class='papir' onclick='velg("papir")'>Papir</button> 
     </main>
-    
-<div id='${skjult}' class='vs'>
+    <br> <button id="reset" class="${skjult}" onclick="reset()"> Prøv igjen? </button>
+<div class='vs ${skjult}'>
     <div class='bilde ${playerChoice}'>Du valgte ${playerChoice}</div> 
     VS
     <div class="bilde ${randomCC}">Datamaskinen valgte ${randomCC}</div>
-</div>
-    
+    </div>
+
     <br><div id="result">${tekst}</div>
+    
 
     `;
     
@@ -78,9 +80,18 @@ function velg(x){
     if (playerChoice == 'papir' && randomCC == 'saks') {
         result = 1;
     }
-
+    disabled = 'disabled';
     show();
     // 1=win 2=tie 3=tape
+}
+
+function reset(){
+    skjult = 'skjult';
+    result = '';
+    tekst = '';
+    disabled = '';
+
+    show();
 }
 //stein =1, saks =2 papir =3 
 

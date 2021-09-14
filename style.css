@@ -1,8 +1,11 @@
 
-
+:root {
+  font-size: 16px;
+}
 body {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
   
 }
 
@@ -21,12 +24,12 @@ main {
   justify-content: center;
   height: 30vh;
   align-items: center;
-  margin: 70px 40px 10px 40px ;
+  margin: 10px ;
   gap: 30px;
 
 }
 
-#skjult {
+.skjult {
   display: none;
 }
 
@@ -37,17 +40,18 @@ main {
   height: 200px;
   color: rgb(48, 48, 48);
   font-weight:100;
-  
   border-radius: 5px;
   line-height: 200px;
-
 }
 
+#reset {
+  height: 45px;
+  background-color: cornflowerblue;
+  
+}
 
 button {
- 
   border: 1px solid rgb(0, 0, 0);
-
   padding: 5px;
   width: 200px;
   height: 200px;
@@ -65,22 +69,19 @@ button:hover{
   color: white;
   box-shadow: 1px 6px 21px -3px #000000;
 }
+
 .saks {
   background-image: url('alex-gruber-KVsFiYXy0BE-unsplash.jpg');
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover; 
-
-  
-
 }
+
 .stein {
   background-image: url('jerome-Ru-id6AmO6A-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: cover; 
   background-position: center top; 
-  
-  
 }
 
 .papir {
@@ -90,9 +91,17 @@ button:hover{
 }
 
 #result {
-  margin: 50px auto;
+  margin: 30px auto 1px;
   height: 10vw;
   width: 50vw;
   font-size: 2rem;
-  
+}
+body::-webkit-scrollbar {
+  width: 0rem;
+}
+body ::-webkit-scrollbar-track {
+  background: black;
+}
+body::-webkit-scrollbar-thumb {
+  background:rgb(255, 0, 0);
 }
